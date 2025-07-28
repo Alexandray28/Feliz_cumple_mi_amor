@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para mi amor 💌</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #d6336c;
+    }
+
+    .emoji {
+      font-size: 5em;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .emoji:hover {
+      transform: scale(1.2);
+    }
+
+    #carta {
+      display: none;
+      margin-top: 30px;
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      color: #333;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Haz clic en el corazón o regalo 🎁</h1>
+
+  <div class="emoji" onclick="mostrarCarta()">❤️🎁</div>
+
+  <div id="carta">
+    <p>Mi amor, esta es solo una forma sencilla de recordarte lo mucho que te amo. 🌹</p>
+    <p>¡Feliz cumpleaños! Gracias por existir. 💖</p>
+  </div>
+
+  <script>
+    function mostrarCarta() {
+      document.getElementById("carta").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
