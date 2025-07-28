@@ -1,35 +1,30 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Para mi amor 💌</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(to bottom right, #ffe6f0, #ffc3d1);
-      font-family: 'Open Sans', sans-serif;
+      background-color: #ffe6f0;
+      font-family: 'Segoe UI', sans-serif;
       text-align: center;
       padding: 50px;
-      margin: 0;
     }
 
     h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: 2.8em;
+      font-size: 2em;
       color: #d6336c;
       margin-bottom: 20px;
     }
 
     .emoji {
-      font-size: 6em;
+      font-size: 4em;
       cursor: pointer;
-      transition: transform 0.4s, filter 0.3s;
       animation: latido 1s infinite;
     }
 
     .emoji:hover {
       transform: scale(1.2);
-      filter: brightness(110%);
     }
 
     @keyframes latido {
@@ -41,15 +36,19 @@
       display: none;
       margin-top: 30px;
       background-color: white;
-      border-radius: 20px;
+      border-radius: 15px;
       padding: 25px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      color: #555;
-      font-size: 1.3em;
-      max-width: 500px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      color: #333;
+      font-size: 1.1em;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
-      transition: opacity 0.5s ease;
+      text-align: justify;
+    }
+
+    #carta p {
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -60,16 +59,29 @@
   <div class="emoji" onclick="mostrarCarta()">❤️🎁</div>
 
   <div id="carta">
-    <p>Mi amor, esta es solo una forma sencilla de recordarte lo mucho que te amo. 🌹</p>
-    <p>¡Feliz cumpleaños! Gracias por existir. 💖</p>
+    <p>
+      Felicidades mi niño lindo, hoy celebró el día en el que nació la persona que más amo en este mundo: tú, mi mamoi dindo. 💖
+    </p>
+    <p>
+      Gracias por ser tú, por todo lo que me das: tu amor, tu paciencia, tu ternura, tus ataques de besos. Creo que en estos casi 5 años la que recibe el regalo día con día soy yo.
+    </p>
+    <p>
+      Me haces reír, me haces sentir amada, me haces soñar con un futuro a tu lado, me haces una mejor persona.
+    </p>
+    <p>
+      No sé cómo explicarlo, pero siento que la vida a tu lado tiene más sentido. Le pido a Dios que este nuevo año te traiga todo lo que sueñas y anhelas en tu corazón, que sigas creciendo, cumpliendo metas y brillando como hasta ahora lo has hecho.
+    </p>
+    <p>
+      Yo siempre, SIEMPRE estaré a tu lado, apoyándote, amándote y animándote, como desde el primer día, o incluso más que el primer día.
+    </p>
+    <p>
+      Me enamoro cada día más de ti. No hay palabras suficientes como para agradecerte... TE AMO. 💞
+    </p>
   </div>
 
   <script>
     function mostrarCarta() {
-      const carta = document.getElementById("carta");
-      carta.style.display = "block";
-      carta.style.opacity = "0";
-      setTimeout(() => carta.style.opacity = "1", 10);
+      document.getElementById("carta").style.display = "block";
     }
   </script>
 
