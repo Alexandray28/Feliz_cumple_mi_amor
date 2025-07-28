@@ -2,13 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Para mi amor 💌</title>
+  <title>Feliz Cumple, mi amor</title>
   <style>
     body {
       background-color: #ffe6f0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Comic Sans MS', cursive;
       text-align: center;
       padding: 50px;
+      overflow: hidden;
     }
 
     h1 {
@@ -20,66 +21,95 @@
     .emoji {
       font-size: 4em;
       cursor: pointer;
-      animation: latido 1s infinite;
+      transition: transform 0.3s;
     }
 
     .emoji:hover {
       transform: scale(1.2);
     }
 
-    @keyframes latido {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-    }
-
     #carta {
       display: none;
-      margin-top: 30px;
+      margin: 30px auto;
       background-color: white;
       border-radius: 15px;
       padding: 25px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
       color: #333;
       font-size: 1.1em;
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
       text-align: justify;
     }
 
-    #carta p {
-      margin-bottom: 15px;
+    .gif {
+      width: 100px;
+      margin-top: 20px;
+    }
+
+    /* Copos de nieve */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      font-size: 1.5em;
+      color: white;
+      user-select: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(100vh); }
     }
   </style>
 </head>
 <body>
 
-  <h1>Haz clic en el corazón o regalo 🎁</h1>
+  <h1>Haz clic en el regalo 🎁</h1>
 
-  <div class="emoji" onclick="mostrarCarta()">❤️🎁</div>
+  <div class="emoji" onclick="mostrarCarta()">🎁</div>
 
   <div id="carta">
     <p>
-      Felicidades mi niño lindo, hoy celebró el día en el que nació la persona que más amo en este mundo: tú, mi mamoi dindo. 💖
+      Felicidades mi niño lindo, hoy celebró el día en el que nació la persona que más amo en este mundo,
+      tu mamoi dindo, gracias por ser tú, por todo lo que me das: tu amor, tu paciencia, tu ternura, tus ataques de besos. ❤️
     </p>
     <p>
-      Gracias por ser tú, por todo lo que me das: tu amor, tu paciencia, tu ternura, tus ataques de besos. Creo que en estos casi 5 años la que recibe el regalo día con día soy yo.
+      Creo que en estos casi 5 años la que recibe el regalo día con día soy yo. Me haces reír, sentirme amada, soñar con un futuro contigo.
+      Me haces una mejor persona. 🙈
     </p>
     <p>
-      Me haces reír, me haces sentir amada, me haces soñar con un futuro a tu lado, me haces una mejor persona.
+      Le pido a Dios que este nuevo año te traiga todo lo que sueñas, que sigas creciendo, cumpliendo metas y brillando.
+      Yo siempre estaré a tu lado, apoyándote, amándote y animándote. ✨
     </p>
     <p>
-      No sé cómo explicarlo, pero siento que la vida a tu lado tiene más sentido. Le pido a Dios que este nuevo año te traiga todo lo que sueñas y anhelas en tu corazón, que sigas creciendo, cumpliendo metas y brillando como hasta ahora lo has hecho.
+      Me enamoro cada día más de ti. TE AMO con todo mi corazón. 💖
     </p>
-    <p>
-      Yo siempre, SIEMPRE estaré a tu lado, apoyándote, amándote y animándote, como desde el primer día, o incluso más que el primer día.
-    </p>
-    <p>
-      Me enamoro cada día más de ti. No hay palabras suficientes como para agradecerte... TE AMO. 💞
-    </p>
+    <img class="gif" src="https://media.giphy.com/media/3og0IPxMM0erATueVW/giphy.gif" alt="Snoopy besito">
   </div>
 
+  <!-- Música -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <!-- Copos de nieve -->
   <script>
+    function crearNieve() {
+      const snowflake = document.createElement("div");
+      snowflake.classList.add("snowflake");
+      snowflake.style.left = Math.random() * window.innerWidth + "px";
+      snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      snowflake.innerHTML = "❄️";
+      document.body.appendChild(snowflake);
+
+      setTimeout(() => {
+        snowflake.remove();
+      }, 5000);
+    }
+
+    setInterval(crearNieve, 200);
+    
     function mostrarCarta() {
       document.getElementById("carta").style.display = "block";
     }
